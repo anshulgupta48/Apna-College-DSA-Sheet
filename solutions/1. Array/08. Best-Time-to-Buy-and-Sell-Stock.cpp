@@ -2,7 +2,7 @@
 
 // <======== Example ========>
 // Input: prices = [7,1,5,3,6,4]
-// Output: 5
+// Output: 5 
 
 // Input: prices = [7,6,4,3,1]
 // Output: 0
