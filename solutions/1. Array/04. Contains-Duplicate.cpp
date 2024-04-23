@@ -5,7 +5,7 @@
 // Output: true
 
 // Input: nums = [1,2,3,4]
-// Output: false 
+// Output: false
 
 // Input: nums = [1,1,1,3,3,4,3,2,4,2]
 // Output: true
@@ -17,14 +17,10 @@ class Solution{
     public:
     bool containsDuplicate(vector<int>& nums) {
         int n = nums.size();
-        map<int, int> mp;
-        
-        for(int i = 0; i < n; i++) {
-            mp[nums[i]]++;
-        }
+        sort(nums.begin(), nums.end());
 
-        for(auto x: mp) {
-            if(x.second > 1) {
+        for(int i = 0; i < n-1; i++) {
+            if(nums[i] == nums[i+1]) {
                 return true;
             }
         }
